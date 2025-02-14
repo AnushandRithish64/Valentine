@@ -1,166 +1,84 @@
-
-/*
-Awesome Lea Verou's Heart Pattern Background
----- */
-
 body {
-	background: 
-radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%),
-radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%),
-radial-gradient(circle closest-side at 40% 22%, #373737 45%, rgba(221,51,85,0) 46%),
-radial-gradient(circle closest-side at 60% 22%, #373737 45%, rgba(221,51,85,0) 46%),
-radial-gradient(circle closest-side at 50% 35%, #373737 30%, rgba(221,51,85,0) 31%),
-
-radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%) 50px 50px,
-radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%) 50px 50px,
-radial-gradient(circle closest-side at 40% 22%, #3c3c3c 45%, rgba(221,51,85,0) 46%) 50px 50px,
-radial-gradient(circle closest-side at 60% 22%, #3c3c3c 45%, rgba(221,51,85,0) 46%) 50px 50px,
-radial-gradient(circle closest-side at 50% 35%, #3c3c3c 30%, rgba(221,51,85,0) 31%) 50px 50px;
-	background-color:#323232;
-	background-size:100px 100px;
-	font-family: 'Lato', sans-serif;
+    background-color: #fce1e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    overflow: hidden;
 }
 
-/*
-Valentine's Pen
----- */
-
-.centered {
-	width: 100%;
-	margin: 30vh auto;
-	text-align: center;
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
 }
 
-.centered h4 {
-	color: #FFFFFF;
-	font-size: 3em;
-	font-weight: bold;
+h1 {
+    color: #e91e63;
+    margin-bottom: 20px;
 }
 
- input[type=checkbox]{
-  display:none;
- }
 
-label {
-	height: 40px;
-	width: auto;
-	padding: 10px 40px;
-	display: inline-block; 
-	cursor: pointer;
-	margin: 0 20px;
-	border-radius: 5px;
-	color: #FFFFFF;
-	font-size: 1.5em;
-	line-height: 1.5em;
-	text-transform: uppercase;
-	transition: all .25s ease-in-out;
+p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
 }
 
-label:hover {
-	transform: 	scale(1.1,1.1);
+.message {
+    margin-top: 30px;
 }
 
-.no {
-	background-color: #D8124B;
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.yes {
-	background-color: #12D890;
+button {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
 }
 
-.answer--yes, .answer--no {
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 9;
-	visibility: hidden;
-	opacity: 0;
-	transition: opacity .5s ease-in-out;
+button:hover {
+    background-color: #d81b60;
 }
 
-.answer--yes {
-	background-image: url('https://media.giphy.com/media/a3IWyhkEC0p32/giphy.gif');
-	background-repeat:no-repeat;
-	background-size: cover;
+#noButton {
+    background-color: #9E9E9E;
 }
 
-.answer--no {
-	background-image: url('https://media.giphy.com/media/QBEhpJHrv7poQ/giphy.gif');
-	background-repeat:no-repeat;
-	background-size: cover;
+#noButton:hover {
+    background-color: #757575;
 }
 
-input.yes[type=checkbox]:checked ~ .answer--yes {
-  visibility: visible;
-	opacity: 100;
+#gifContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 
-input.no[type=checkbox]:checked ~ .answer--no {
-  visibility: visible;
-	opacity: 100;
+#gifContainer img {
+    max-width: 90%;
+    max-height: 90%;
 }
-
-/*
-Signature
----- */
-
-.signature {
-	position: absolute;
-	margin: auto;
-	bottom: 0;
-	top: auto;
-	width: 95%;
-}
-
-.signature p{
-	text-align: center;
-	font-family: Helvetica, Arial, Sans-Serif;
-	font-size: 0.85em;
-	color: #FFFFFF;
-}
-
-.signature .much-heart{
-	display: inline-block;
-	position: relative;
-	margin: 0 4px;
-	height: 10px;
-	width: 10px;
-	background: #D8124B;
-	border-radius: 4px;
-	-ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.signature .much-heart::before, 
-.signature .much-heart::after {
-	  display: block;
-  content: '';
+a {
   position: absolute;
-  margin: auto;
-  height: 10px;
-  width: 10px;
-  border-radius: 5px;
-  background: #D8124B;
-  top: -4px;
-}
-
-.signature .much-heart::after {
-	bottom: 0;
-	top: auto;
-	left: -4px;
-}
-
-.signature a {
-	color: #D8124B;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.signature a:hover {
-	color: coral;
-	text-decoration: none;
-	font-weight: bold;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* If you want the link to span the width */
+  text-align: center; /* Example: center the text within the <a> */
+  /* ... other link styles ... */
 }
