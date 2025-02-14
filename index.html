@@ -1,17 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
-<script> src="script.js"></script> 
-   <body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day!</h1>
+        <div class="heart"></div>
+        <p>I love you more than words can say.</p>
+        <div class="message">
+            <p>Will you be my Valentine?</p>
+            <div class="buttons">
+                <button id="yesButton">Yes!</button>
+                <button id="noButton">No</button>
+            </div>
+        </div>
+    </div>
 
-<div class="centered">
-    <h4>Will you be My Valentine?</h4><input class="no" type="checkbox" name="answer" id="No" /><label class="no" for="No">Nope</label><input class="yes" type="checkbox" name="answer" id="Yes" /><label class="yes" for="Yes">Yup</label>
-    <div class="answer--yes"></div>
-    <div class="answer--no"></div>
-</div>
-<div class="signature">
-    <p>Made with <i class="much-heart"></i> by <a> Ani</a></p>
-</div>
+    <div id="gifContainer" style="display:none;">
+        <img src="https://media2.giphy.com/media/7HB81eNyiC1IkFqkxA/giphy.gif?cid=6c09b9525on594mi0sqnx1n92yxfl7jdqdgsvt7v03yihxxi&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Funny GIF">
+    </div>
+	<a>Made with ❤️ by Ani</a>
+
+    <script src="script.js"></script>
 </body>
 </html>
